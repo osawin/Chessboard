@@ -1,7 +1,7 @@
 {
   "name": "simple-react-full-stack",
   "version": "1.0.0",
-  "description": "Boilerplate to build a full stack web application using React, Node.js, Express and Webpack.",
+  "description": "Chessboard",
   "main": "src/server/index.js",
   "scripts": {
     "start": "node src/server/index.js",
@@ -10,12 +10,14 @@
     "server": "nodemon src/server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "Sandeep Raveesh",
+  "author": "Oliver Sawin",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
+    "npm": "^6.4.1",
     "react": "^16.3.1",
-    "react-dom": "^16.3.1"
+    "react-dom": "^16.3.1",
+    "react-html-parser": "^2.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
