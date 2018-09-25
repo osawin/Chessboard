@@ -16,7 +16,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          options: {
+            presets: ['react']
+          }
         }
       },
       {
@@ -26,10 +29,11 @@ module.exports = {
     ]
   },
   devServer: {
+  	host: "osawin.pairserver.com",
     port: 3000,
     open: true,
     proxy: {
-      '/api': 'http://localhost:8080'
+      '/api': 'http://oliversawin.com:8080'
     }
   },
   plugins: [

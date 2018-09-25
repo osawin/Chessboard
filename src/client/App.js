@@ -4,8 +4,9 @@ import './app.css';
 class Square extends React.Component {
   render() {
     return (
-      <button className={this.props.className} onClick={() => this.props.onClick()}>
-        {this.props.value}
+      <button 
+        className={this.props.className} 
+        onClick={() => this.props.onClick()}>{this.props.value}
       </button>
     );
   }
@@ -1314,34 +1315,22 @@ class Board extends React.Component {
     	grid = "even";
     }
     return <Square 
-       value={this.state.squares[i]} 
-	   onClick={() => this.handleClick(i)}
-	   className={"square " + this.state.squaresLegal[i] + " " + this.state.squaresColor[i] + " " + grid}
-	/>;
+             value={this.state.squares[i]} 
+             onClick={() => this.handleClick(i)} 
+             className={"square " + this.state.squaresLegal[i] + " " + this.state.squaresColor[i] + " " + grid}
+           />;
   }
 
   renderSave() {
-    return <Square 
-       value={"save"} 
-	   onClick={() => this.save()}
-	   className={"button"}
-	/>;
+    return <Square value={"save"} onClick={() => this.save()} className={"button"}/>;
   }
 
   renderLoad() {
-    return <Square 
-       value={"load"} 
-	   onClick={() => this.load()}
-	   className={"button"}
-	/>;
+    return <Square value={"load"} onClick={() => this.load()} className={"button"}/>;
   }
 
   renderMark() {
-    return <Square 
-       value={"mark"} 
-	   onClick={() => this.setStarting()}
-	   className={"button"}
-	/>;
+    return <Square value={"mark"} onClick={() => this.setStarting()} className={"button"}/>;
   }
 
   render() {
@@ -1349,7 +1338,7 @@ class Board extends React.Component {
 
     return (
       <div>
-        <div className="status">{status + this.state.turn + this.state.username}</div>
+        <div className="status">{status + this.state.turn}</div>
         <div className="message">{this.state.message}</div>
         <div className="buttons">
         	{this.renderSave()}
